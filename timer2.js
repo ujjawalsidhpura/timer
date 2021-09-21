@@ -17,8 +17,15 @@ rl.question('Please enter number between 1 to 9 to set timer OR b for instant be
     process.stdout.write('\x07');
   }, counter)
 
+  // To EXIT, we can use either first option or second
+
+  //Option 1
   process.on('SIGINT', function () {
     rl.close();
   });
 
+  //option 2
+  // if (answer.key === 'c' && answer.key.name === key.ctrl) {
+  //   rl.close();
+  // }
 });
